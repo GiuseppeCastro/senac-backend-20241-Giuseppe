@@ -25,5 +25,25 @@ public class pessoaRepository {
 		pessoas.remove(pessoa);
 	}
 	
+	 public void excluirPessoa(int idPessoa) {
+	        if (pessoaRepository.pessoaRecebeuDoseVacina(idPessoa)) {
+	            throw new RuntimeException("Não é possível excluir a pessoa, pois ela já recebeu pelo menos uma dose de vacina.");
+	        }
+
+	        pessoaRepository pessoaRepository = new pessoaRepository();
+			pessoaRepository.excluirPessoa(idPessoa);
+	    }
+
+	public static boolean pessoaRecebeuDoseVacina(int idPessoa) {
+		return false;
+	}
+
+	public static Pessoa consultarPessoaPorId(Object idPessoa) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }
+	
+	
+

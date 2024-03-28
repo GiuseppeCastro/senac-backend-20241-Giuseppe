@@ -1,6 +1,7 @@
 package service;
 
 import model.entity.Pessoa;
+import model.repository.AplicacaoRepository;
 import model.repository.pessoaRepository;
 
 public class PessoaService {
@@ -19,5 +20,15 @@ public class PessoaService {
 		pessoaRepository.SalvarPessoa(pessoa);
 
 	}
+	
+	 public void excluirPessoa(int idPessoa) {
+	        // Verificar se a pessoa já recebeu pelo menos uma dose de vacina
+	        if (pessoaRepository.pessoaRecebeuDoseVacina(idPessoa)) {
+	            throw new RuntimeException("Não é possível excluir a pessoa, pois ela já recebeu pelo menos uma dose de vacina.");
+	        }
+
+	        // Caso a pessoa não tenha recebido nenhuma dose de vacina, pode ser excluída
+	        pessoaRepository.excluirPessoa(idPessoa);
+	    }
 	
 }

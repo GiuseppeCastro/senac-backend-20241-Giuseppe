@@ -26,5 +26,20 @@ public class AplicacaoRepository {
     public void excluirAplicacao(Aplicacao aplicacao) {
         aplicacoes.remove(aplicacao);
     }
+
+	public static void registrarVacinacao(Aplicacao vacinacao) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static List<Aplicacao> consultarAplicacoesPorVacina(int idVacina) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public static void atualizarVacinacao(Aplicacao vacinacao) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }

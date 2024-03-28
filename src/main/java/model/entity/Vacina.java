@@ -47,6 +47,46 @@ public class Vacina {
     public void setNomePesquisador(String nomePesquisador) {
         this.nomePesquisador = nomePesquisador;
     }
+    
+    private int id;
+    private String nome;
+    private double mediaVacina; // Média das aplicações da vacina
+
+    public Vacina(int id, String nome, double mediaVacina) {
+        this.id = id;
+        this.nome = nome;
+        this.mediaVacina = mediaVacina;
+    }
+
+    // Getters e setters
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getMediaVacina() {
+        return mediaVacina;
+    }
+
+    public void setMediaVacina(double mediaVacina) {
+        this.mediaVacina = mediaVacina;
+    }
+
+	public int getSituacao() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 	
 }

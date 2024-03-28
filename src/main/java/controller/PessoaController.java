@@ -1,5 +1,7 @@
 package controller;
 
+
+
 import model.entity.Pessoa;
 import model.repository.pessoaRepository;
 import service.ControleVacinasException;
@@ -11,6 +13,9 @@ public class PessoaController {
 
 	private PessoaService pessoaService;
 	private pessoaRepository pessoarepository;
+	
+	@RestController
+	@RequestMapping("/pessoas")
 	
 	public PessoaController() {
 		this.pessoaService = new PessoaService();
@@ -32,4 +37,13 @@ public class PessoaController {
 
     public void excluirPessoa(String id) {
     }
+    
+    @DeleteMapping("/{id}")
+    public void excluir(@PathVariable Long id) {
+        if (!pessoaService.podeExcluirPessoa(id)) {
+            throw new RuntimeException("Pessoa não pode ser excluída: possui vacinações registradas.");
+        }
+        ...
+    }
+    
 }

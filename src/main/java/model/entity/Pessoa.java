@@ -1,11 +1,14 @@
 package model.entity;
 
+import java.util.List;
+
 public class Pessoa {
 	
 	private String nome;
 	private String DataNascimento;
 	private char Sexo;
 	private String CPF;
+	private List<Aplicacao> vacinacoes;
 	
 	public Pessoa (String nome, String DataNascimento, char Sexo, String CPF) {
 		this.nome = nome;
@@ -46,6 +49,20 @@ public class Pessoa {
 	
 	public void setCPF(String CPF) {
 		this.CPF = CPF;
+	}
+	
+	 public void setVacinacoes(List<Aplicacao> vacinacoes) {
+	        this.vacinacoes = vacinacoes;
+	    }
+	
+	public List<Aplicacao> getVacinacoes() {
+        List<Aplicacao> Aplicacao = null;
+		return Aplicacao;
+    }
+
+	public int getPerfil() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 

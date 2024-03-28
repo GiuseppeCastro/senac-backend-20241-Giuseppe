@@ -37,5 +37,20 @@ public class Aplicacao {
     public void setReacao(int reacao) {
         this.reacao = reacao;
     }
+
+	public int getIdVacina() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public double getNota() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public Object getIdPessoa() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

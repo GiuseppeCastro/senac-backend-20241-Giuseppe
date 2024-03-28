@@ -11,9 +11,16 @@ public class VacinaService {
 	        this.vacinaRepository = new VacinaRepository();
 	    }
 
-	    // Método para salvar uma nova vacina
 	    public void salvarVacina(Vacina vacina) {
 	        vacinaRepository.salvarVacina(vacina);
+	    }
+	    
+	    public void excluirVacina(int idVacina) {
+	        if (vacinaRepository.vacinaAplicadaEmPessoa(idVacina)) {
+	            throw new RuntimeException("Não é possível excluir a vacina, pois ela já foi aplicada em pelo menos uma pessoa.");
+	        }
+
+	        vacinaRepository.excluirVacina(idVacina);
 	    }
 	
 }

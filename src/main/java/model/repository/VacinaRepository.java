@@ -13,19 +13,32 @@ public class VacinaRepository {
         this.vacinas = new ArrayList<>();
     }
 
-    // Método para salvar uma nova vacina
     public void salvarVacina(Vacina vacina) {
         vacinas.add(vacina);
     }
 
-    // Método para listar todas as vacinas cadastradas
     public List<Vacina> listarVacinas() {
         return vacinas;
     }
 
-    // Método para excluir uma vacina
-    public void excluirVacina(Vacina vacina) {
-        vacinas.remove(vacina);
+    public void excluirVacina(int idVacina) {
+        vacinas.remove(idVacina);
     }
+    
+    public boolean vacinaAplicadaEmPessoa(int idVacina) {
+        return false;
+    }
+
+	public static Vacina consultarVacinaPorId(int idVacina) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public static void atualizarVacina(Vacina vacina) {
+		// TODO Auto-generated method stub
+		
+	}
+    
+    
 	
 }
